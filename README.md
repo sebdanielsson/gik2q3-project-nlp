@@ -16,7 +16,6 @@ In the lab environment some repositories are dead and need to be removed. Those 
 ```sh
 yum install -y maven
 mvn package -Dmaven.wagon.http.timeout=960000
-mvn package
 ```
 
 Download example data.
@@ -39,4 +38,16 @@ Run the program.
 
 ```sh
 hadoop jar ./target/gik2q3-project-nlp-1.0-SNAPSHOT.jar /tmp/test/input /tmp/test/output
+```
+
+Copy the output to the local file system.
+
+```sh
+hdfs dfs -copyToLocal /tmp/test/output/big_processed.txt ./big_processed.txt
+```
+
+Copy the file from the container to the local file system.
+
+```sh
+ docker cp {{container_id}}:/root/gik2q3-project-nlp/big_processed.txt ./
 ```
