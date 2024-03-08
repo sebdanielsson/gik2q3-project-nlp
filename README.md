@@ -1,4 +1,4 @@
-# GIK2QR Project
+# GIK2Q3 Project
 
 ## Usage
 
