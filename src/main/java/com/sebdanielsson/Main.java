@@ -25,6 +25,8 @@ public class Main {
 
         String inputDirectoryPath = args[0];
         String outputDirectoryPath = args[1];
+        System.out.println("Input Path: " + args[0]);
+        System.out.println("Output Path: " + args[1]);
 
         // Set up the Hadoop configuration and file system object
         Configuration conf = new Configuration();
