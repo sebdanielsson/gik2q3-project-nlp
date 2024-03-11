@@ -34,10 +34,10 @@ hdfs dfs -ls /tmp/test/input
 hdfs dfs -ls /tmp/test/output
 ```
 
-Run the program.
+Run the program. `hadoop jar {{path_to_jar}} {{input_path}} {{output_path}}`
 
 ```sh
-hadoop jar ./target/gik2q3-project-nlp-1.0-SNAPSHOT.jar /tmp/test/input /tmp/test/output
+hadoop jar ./target/nlp-1.0.jar /tmp/test/input /tmp/test/output
 ```
 
 Copy the output to the local file system.
