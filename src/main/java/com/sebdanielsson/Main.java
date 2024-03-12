@@ -89,8 +89,6 @@ public class Main {
             // Iterate over the tokens in the sentence
             for (CoreLabel token : sentence.tokens()) {
                 String lemma = token.lemma(); // Lemmatized word
-                // Only append words that are not punctuation (you can enhance this check as
-                // needed)
                 if (!lemma.matches("\\p{Punct}")) {
                     processedText.append(lemma).append(" ");
                 }
